@@ -34,6 +34,9 @@ export default function HomeCard(): ReactNode {
         </div>
       </div>
       <WhoAmI />
+      <div id="projects">
+        <Projects />
+      </div>
     </div>
   );
 }

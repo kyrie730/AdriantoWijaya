@@ -35,7 +35,7 @@ function StatsCard(props: StatsCardProps) {
 export default function WhoAmI() {
   return (
     <Box className="bg-background-light p-4 md:p-14">
-      <SimpleGrid columns={{ base: 1, md: 4 }} spacing={{ base: 5, lg: 8 }}>
+      <SimpleGrid columns={{ base: 2, lg: 4 }} spacing={{ base: 2, md: 8 }}>
         <StatsCard
           title={"Software Engineering"}
           stat={`${moment()

@@ -130,7 +130,7 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: "Projects",
-    href: "/projects",
+    href: "#projects",
   },
   {
     label: "Contact",
