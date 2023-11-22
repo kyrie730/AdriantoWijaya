@@ -15,6 +15,7 @@ const config: Config = {
         background: {
           DEFAULT: "#1f2334",
           dark: "#181c28",
+          light: "#262b3f",
         },
         black: "#000000",
         primary: {

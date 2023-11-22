@@ -46,7 +46,7 @@ export default function WithSubnavigation({
         <MobileNav />
       </Collapse>
 
-      <div className="m-2 p-2 md:m-7 md:p-7">{children}</div>
+      <div>{children}</div>
       <Footer />
     </Box>
   );

@@ -3,11 +3,12 @@ import { Images } from "@/shared/Constant/Assets";
 import { Text } from "@chakra-ui/react";
 import Image from "next/image";
 import { ReactNode } from "react";
+import { Projects, WhoAmI } from "..";
 
 export default function HomeCard(): ReactNode {
   return (
-    <div className="gap-10 flex flex-col">
-      <div className="flex w-full space-x-4 gap-6 items-center justify-between flex-col-reverse md:flex-row my-6">
+    <div className="flex flex-col">
+      <div className="flex space-x-4 gap-6 items-center justify-between flex-col-reverse md:flex-row m-2 p-2 md:m-7 md:p-7 md:pb-0 md:mb-0">
         <div className="flex md:w-1/2 flex-col gap-6">
           <Text className="text-8xl font-bold hidden lg:block">Greetings!</Text>
           <Text className="text-8xl font-bold lg:hidden text-center md:text-start">
@@ -32,6 +33,7 @@ export default function HomeCard(): ReactNode {
           </div>
         </div>
       </div>
+      <WhoAmI />
     </div>
   );
 }
