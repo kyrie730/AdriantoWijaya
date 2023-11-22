@@ -12,16 +12,17 @@ const config: Config = {
         preload: "preload-loading 1.5s infinite ease-in-out",
       },
       colors: {
-        background: "#000000",
+        background: "#1f2334",
         black: "#000000",
         primary: {
-          DEFAULT: "#c6a548",
-          light: "#d7c07e",
-          dark: "#004EA3",
+          DEFAULT: "#e65364",
+        },
+        secondary: {
+          DEFAULT: "#f7f8fa",
         },
       },
       fontFamily: {
-        lato: ["var(--font-lato)"],
+        leagueSpartan: ["var(--league-spartan)"],
       },
       keyframes: {
         "preload-loading": {

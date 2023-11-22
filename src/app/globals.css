@@ -6,9 +6,9 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 0, 0, 0;
   --background-end-rgb: 255, 255, 255;
-  --primary: #c6a548;
-  --secondary: #000000;
-  --tertiary: #ffffff;
+  --primary: #e65364;
+  --secondary: #1f2334;
+  --tertiary: #f7f8fa;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,7 +25,7 @@ body {
 }
 
 *::-webkit-scrollbar {
-  width: 8px;
+  width: 5px;
 }
 
 *::-webkit-scrollbar-track {

@@ -1,16 +1,16 @@
 import { PageTitle } from "@/shared/Constant";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Lato } from "next/font/google";
+import { League_Spartan } from "next/font/google";
 import TopLoader from "nextjs-toploader";
 import ApplicationProviders from "@/shared/Component/ApplicationProviders";
 
-const LatoConfig = Lato({
+const FontConfig = League_Spartan({
   weight: ["300", "400", "700"],
   display: "swap",
   style: "normal",
   subsets: ["latin"],
-  variable: "--font-lato",
+  variable: "--league-spartan",
 });
 
 export const metadata: Metadata = {
@@ -28,8 +28,8 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body className={LatoConfig.className}>
-        <TopLoader showSpinner color="#C6A548" />
+      <body className={FontConfig.className}>
+        <TopLoader showSpinner color="#e25768" />
         <ApplicationProviders>{children}</ApplicationProviders>
       </body>
     </html>

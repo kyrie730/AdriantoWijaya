@@ -7,8 +7,8 @@ export default function ApplicationProviders({ children }: PropsWithChildren) {
     styles: {
       global: () => ({
         body: {
-          bg: "",
-          color: "#c6a548",
+          bg: "#1f2334",
+          color: "#e65364",
         },
       }),
     },

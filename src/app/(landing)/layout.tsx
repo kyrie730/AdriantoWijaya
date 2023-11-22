@@ -2,30 +2,14 @@
 
 import {
   Box,
-  Flex,
-  Text,
   IconButton,
-  Button,
   Stack,
   Collapse,
-  Icon,
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
   useColorModeValue,
-  useBreakpointValue,
   useDisclosure,
-  Heading,
 } from "@chakra-ui/react";
-import {
-  HamburgerIcon,
-  CloseIcon,
-  ChevronDownIcon,
-  ChevronRightIcon,
-} from "@chakra-ui/icons";
+import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { PropsWithChildren, ReactNode } from "react";
-import Image from "next/image";
-import { Images } from "@/shared/Constant/Assets";
 
 export default function WithSubnavigation({
   children,
@@ -34,72 +18,23 @@ export default function WithSubnavigation({
 
   return (
     <Box>
-      {/* <Flex
-        bg={useColorModeValue("white", "gray.800")}
-        color={useColorModeValue("gray.600", "white")}
-        minH={"60px"}
-        py={{ base: 2 }}
-        px={{ base: 4 }}
-        borderBottom={1}
-        borderStyle={"solid"}
-        borderColor={useColorModeValue("gray.200", "gray.900")}
-        align={"center"}
-        direction={{ base: "row-reverse", md: "row" }}
-      >
-        <Flex
-          flex={{ base: 1, md: "auto" }}
-          ml={{ base: -2 }}
-          display={{ base: "flex", md: "none" }}
-          justify={"end"}
-        >
-          <IconButton
-            onClick={onToggle}
-            icon={
-              isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
-            }
-            variant={"ghost"}
-            aria-label={"Toggle Navigation"}
-          />
-        </Flex>
-        <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-          <div className="relative w-">
-            <Image alt="D'Gift" fill src={Images.DgiftLogo} priority={true} />
-          </div>
-
-          <Flex display={{ base: "none", md: "flex" }} ml={10}>
-            <DesktopNav />
-          </Flex>
-        </Flex>
-      </Flex> */}
-
-      <div className="flex bg-black text-primary h-24 py-2 px-4 border-solid border-black-1">
+      <div className="flex bg-background m-2 p-2 text-primary md:px-7 md:m-7 border-solid border-black-1">
         <div className="flex w-full items-center gap-10">
           <div className="md:hidden">
             <IconButton
               onClick={onToggle}
               icon={
                 isOpen ? (
-                  <CloseIcon w={8} h={8} color={"#c6a548"} />
+                  <CloseIcon w={6} h={6} color={"#f7f8fa"} />
                 ) : (
-                  <HamburgerIcon w={8} h={8} color={"#c6a548"} />
+                  <HamburgerIcon w={6} h={6} color={"#f7f8fa"} />
                 )
               }
               variant={"ghost"}
               aria-label={"Toggle Navigation"}
             />
           </div>
-          <div className="flex gap-1 items-center">
-            <div className="relative py-3">
-              <Image
-                alt="D'Gift"
-                height={70}
-                width={70}
-                src={Images.DgiftLogo}
-                priority={true}
-              />
-            </div>
-            <p className="text-primary text-3xl">D&apos;Gift</p>
-          </div>
+          <p className="text-primary text-5xl">Awe.</p>
           <div className="hidden w-1/2 md:flex ml-3">
             <DesktopNav />
           </div>
@@ -126,7 +61,7 @@ const DesktopNav = () => {
             _hover={{
               textDecoration: "none",
             }}
-            className="p-2 text-base text-primary hover:text-primary-light"
+            className="p-2 text-xl text-secondary hover:text-primary-light"
           >
             {navItem.label}
           </Box>
@@ -138,7 +73,7 @@ const DesktopNav = () => {
 
 const MobileNav = () => {
   return (
-    <Stack className="p-4 md:hidden bg-black">
+    <Stack className="p-4 md:hidden bg-background">
       {NAV_ITEMS.map((navItem) => (
         <MobileNavItem key={navItem.label} {...navItem} />
       ))}
@@ -159,7 +94,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
         }}
         className="py-2 justify-between items-center"
       >
-        <p className="text-primary font-semibold">{label}</p>
+        <p className="text-xl text-secondary font-semibold">{label}</p>
       </Box>
 
       <Collapse in={isOpen} animateOpacity className="mt-0">
@@ -192,7 +127,11 @@ const NAV_ITEMS: Array<NavItem> = [
     href: "",
   },
   {
-    label: "Products",
+    label: "Projects",
+    href: "/projects",
+  },
+  {
+    label: "Contact",
     href: "",
   },
 ];
