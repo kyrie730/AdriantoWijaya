@@ -12,7 +12,10 @@ const config: Config = {
         preload: "preload-loading 1.5s infinite ease-in-out",
       },
       colors: {
-        background: "#1f2334",
+        background: {
+          DEFAULT: "#1f2334",
+          dark: "#181c28",
+        },
         black: "#000000",
         primary: {
           DEFAULT: "#e65364",

@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { PropsWithChildren, ReactNode } from "react";
+import Footer from "@/shared/Component/Footer";
 
 export default function WithSubnavigation({
   children,
@@ -46,6 +47,7 @@ export default function WithSubnavigation({
       </Collapse>
 
       <div className="m-2 p-2 md:m-7 md:p-7">{children}</div>
+      <Footer />
     </Box>
   );
 }

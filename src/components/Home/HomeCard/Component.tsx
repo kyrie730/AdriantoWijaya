@@ -13,7 +13,7 @@ export default function HomeCard(): ReactNode {
           <Text className="text-8xl font-bold lg:hidden text-center md:text-start">
             Hi!
           </Text>
-          <Text className="text-2xl text-gray-300 text-justify">
+          <Text className="text-xl text-gray-300 text-justify">
             I&apos;m Adrianto Wijaya, but you can just call me Awe!😊. I&apos;m
             a proud Binusian 23, a Zillenial developer that currently works as a
             Fullstack Programmer at Bina Nusantara IT Division and I&apos;m
