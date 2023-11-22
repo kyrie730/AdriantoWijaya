@@ -15,7 +15,7 @@ const FontConfig = League_Spartan({
 
 export const metadata: Metadata = {
   title: PageTitle.Main,
-  description: `D'Gift`,
+  description: `I'm Adrianto Wijaya, people usually calls me Awe or Adri, but I prefer to be called as Awe on work environment. I'm currently a Fullstack Programmer at Bina Nusantara IT Division and I'm really interested on Frontend and Fullstack Development.`,
 };
 
 export default function RootLayout({

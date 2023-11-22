@@ -12,8 +12,7 @@ export default function HomeCard(): ReactNode {
           <Text className="text-8xl font-bold hidden lg:block">Greetings!</Text>
           <Text className="text-8xl font-bold lg:hidden">Hi!</Text>
           <Text className="text-2xl text-gray-300 text-justify">
-            I&apos;m Adrianto Wijaya, people usually calls me Awe or Adri, but I
-            prefer to be called as Awe on work environment 😊. I&apos;m
+            I&apos;m Adrianto Wijaya, but you can just call me Awe!😊. I&apos;m
             currently a Fullstack Programmer at Bina Nusantara IT Division and
             I&apos;m really interested on Frontend and Fullstack Development.
           </Text>
