@@ -36,59 +36,43 @@ const PROJECT_LIST: Projects[] = [
 export default function Projects(): ReactNode {
   return (
     <div className="m-2 p-2 md:p-7 md:m-7 flex flex-col gap-5">
-      <Text className="text-7xl font-bold">My Projects</Text>
-      <SimpleGrid columns={{ base: 1, lg: 3 }} spacing={{ base: 5, md: 8 }}>
+      <Text className="text-7xl font-bold text-white">My Projects</Text>
+      <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={{ base: 5, md: 8 }}>
         {PROJECT_LIST.map((e) => (
           <>
             <Box
               rounded={"md"}
               p={6}
-              className="border-solid border border-primary bg-background-light"
+              className="border-solid border border-primary bg-background-light shadow-primary"
             >
               <Stack>
-                <Box mt={-6} mx={-6} pos={"relative"}>
-                  <Image src={e.image} alt={e.title} className="rounded-md" />
+                <Box
+                  className="group relative cursor-pointer"
+                  mt={-6}
+                  mx={-6}
+                  pos={"relative"}
+                  as="a"
+                  href={e.url}
+                  target="_blank"
+                >
+                  <span className="absolute left-1/2 top-1/2 z-10 hidden text-2xl text-white font-extrabold -translate-x-1/2 -translate-y-1/2 transform text-center transition group-hover:block">
+                    View Project
+                  </span>
+                  <Image
+                    src={e.image}
+                    alt={e.title}
+                    className="rounded-md transition-all group-hover:brightness-50"
+                  />
                 </Box>
                 <Heading fontSize={"2xl"} className="text-primary">
                   {e.title}
                 </Heading>
                 <Text className="text-secondary">{e.description}</Text>
-                <div className="flex flex-row-reverse">
-                  <Box
-                    as="a"
-                    href={e.url}
-                    target="_blank"
-                    display="inline-block"
-                    transition="transform 0.2s"
-                    _hover={{
-                      transform: "scale(1.1)",
-                      textDecoration: "underline",
-                      cursor: "pointer",
-                    }}
-                  >
-                    Visit Website →
-                  </Box>
-                </div>
               </Stack>
             </Box>
           </>
         ))}
       </SimpleGrid>
-      <div className="flex flex-row-reverse">
-        <Box
-          as="a"
-          href="/projects"
-          display="inline-block"
-          transition="transform 0.2s"
-          _hover={{
-            transform: "scale(1.1)",
-            textDecoration: "underline",
-            cursor: "pointer",
-          }}
-        >
-          See More →
-        </Box>
-      </div>
     </div>
   );
 }

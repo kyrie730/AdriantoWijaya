@@ -1,8 +1,9 @@
 enum PageTitle {
-  Main = `Adrianto Wijaya`,
+  Main = "Adrianto Wijaya",
 
   //Pages
-  Home = `Adrianto Wijaya`,
+  Home = "Adrianto Wijaya",
+  Projects = "Awe. | Projects",
 }
 
 export default PageTitle;

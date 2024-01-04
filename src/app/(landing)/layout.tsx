@@ -11,6 +11,7 @@ import {
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { PropsWithChildren, ReactNode } from "react";
 import Footer from "@/shared/Component/Footer";
+import { getWhatsappURL } from "@/shared/Utility";
 
 export default function WithSubnavigation({
   children,
@@ -60,6 +61,7 @@ const DesktopNav = () => {
           <Box
             as="a"
             href={navItem.href}
+            target={navItem.isNewTab ? "_blank" : "_self"}
             _hover={{
               textDecoration: "none",
             }}
@@ -83,7 +85,7 @@ const MobileNav = () => {
   );
 };
 
-const MobileNavItem = ({ label, children, href }: NavItem) => {
+const MobileNavItem = ({ label, children, href, isNewTab }: NavItem) => {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
@@ -91,6 +93,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
       <Box
         as="a"
         href={href ?? "#"}
+        target={isNewTab ? "_blank" : "_self"}
         _hover={{
           textDecoration: "none",
         }}
@@ -121,19 +124,21 @@ interface NavItem {
   subLabel?: string;
   children?: Array<NavItem>;
   href?: string;
+  isNewTab?: boolean;
 }
 
 const NAV_ITEMS: Array<NavItem> = [
   {
     label: "Home",
-    href: "",
+    href: "/",
   },
   {
     label: "Projects",
-    href: "#projects",
+    href: "/projects",
   },
   {
     label: "Contact",
-    href: "",
+    href: getWhatsappURL(),
+    isNewTab: true,
   },
 ];
