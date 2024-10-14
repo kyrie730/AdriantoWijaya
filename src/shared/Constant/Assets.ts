@@ -4,6 +4,7 @@ export enum Images {
   PortofolioProject = "/assets/images/im_portofolio_project.png",
   DGiftProject = "/assets/images/im_dgift_project.png",
   VerihubsRevamp = "/assets/images/im_revamp_verihubs_landing.png",
+  GaHelpdesk = "/assets/images/im_gahelpdesk.png",
 }
 
 export enum Illustrations {

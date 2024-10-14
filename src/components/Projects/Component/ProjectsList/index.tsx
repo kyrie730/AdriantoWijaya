@@ -31,6 +31,13 @@ const PROJECT_LIST: Projects[] = [
       "Revamped Verihubs landing page using wordpress as framework and GA4 as analytics. Made using HTML and SASS. It is a responsive website which you can open from your desktop, phone, and tablet.",
     url: "https://verihubs.com/",
   },
+  {
+    image: Images.GaHelpdesk,
+    title: "Binus GA Helpdesk",
+    description:
+      "My first fullstack application, made using React as its front end framework, .Net as its back end framework (with the help of .Net internal library and tools), and SQL Server for database. GA Helpdesk is an internal landing page for General Affairs issues.",
+    url: "",
+  },
 ];
 
 export default function Projects(): ReactNode {
